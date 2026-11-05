@@ -57,6 +57,9 @@
   # Disallow direct `useradd` using.
   users.mutableUsers = false;
 
+  # Enable hardware graphics driver.
+  hardware.graphics.enable = true;
+
   # Programs to enable.
   programs.dconf.enable = true;
   programs.sway.enable = true;
