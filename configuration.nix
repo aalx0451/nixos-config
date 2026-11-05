@@ -63,6 +63,14 @@
   # Use tmpfs for /tmp.
   boot.tmp.useTmpfs = true;
 
+  # Enable zRAM.
+  zramSwap = {
+    enable = true;
+    memoryPercent = 100;
+    algorithm = "zstd";
+    priority = 100;
+  };
+
   # Enable hardware graphics driver.
   hardware.graphics.enable = true;
 
