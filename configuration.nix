@@ -60,6 +60,9 @@
   # Disallow direct `useradd` using.
   users.mutableUsers = false;
 
+  # Use tmpfs for /tmp.
+  boot.tmp.useTmpfs = true;
+
   # Enable hardware graphics driver.
   hardware.graphics.enable = true;
 
