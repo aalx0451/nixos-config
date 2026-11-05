@@ -17,6 +17,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Host name.
+  networking.hostName = "laurel";
+
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
