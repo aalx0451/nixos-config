@@ -33,6 +33,23 @@
     keyMap = "ru";
   };
 
+  # Define user accounts.
+  users.users.lina = {
+    createHome = true;
+    description = "Polina S.";
+    enable = true;
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    group = "users";
+    hashedPassword = "$y$j9T$.bDyP0NucYQ5EJCvNFR9H1$JA1GE15yUPxevjEQNX2JOJuWp7mBtvWy9zXpPnRkiU8";
+    home = "/home/lina";
+    homeMode = "0700";
+    isNormalUser = true;
+    shell = pkgs.zsh;
+  };
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   system.stateVersion = "26.11";
