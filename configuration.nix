@@ -53,6 +53,9 @@
   # Disallow direct `useradd` using.
   users.mutableUsers = false;
 
+  # Programs to enable.
+  programs.dconf.enable = true;
+
   # Services to enable.
   services.avahi = {
     enable = true;
