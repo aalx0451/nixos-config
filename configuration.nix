@@ -53,6 +53,23 @@
   # Disallow direct `useradd` using.
   users.mutableUsers = false;
 
+  # Services to enable.
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    nssmdns6 = true;
+    openFirewall = true;
+
+    settings = {
+      publish = {
+        disable-publishing = false;
+        disable-user-service-publishing = false;
+        publish-addresses = true;
+        publish-workstation = true;
+      };
+    };
+  };
+
   # First NixOS version installed.
   system.stateVersion = "26.11";
 
