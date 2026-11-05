@@ -53,7 +53,6 @@
   # Disallow direct `useradd` using.
   users.mutableUsers = false;
 
-  # This option defines the first version of NixOS you have installed on this particular machine,
-  # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
+  # First NixOS version installed.
   system.stateVersion = "26.11";
 }
