@@ -55,6 +55,7 @@
 
   # Programs to enable.
   programs.dconf.enable = true;
+  programs.sway.enable = true;
 
   # Services to enable.
   services.avahi = {
