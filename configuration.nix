@@ -58,6 +58,11 @@
   programs.sway.enable = true;
   programs.zsh.enable = true;
 
+  # Fonts to enable.
+  fonts.packages = with pkgs; [
+    jetbrains-mono
+  ];
+
   # Services to enable.
   services.avahi = {
     enable = true;
