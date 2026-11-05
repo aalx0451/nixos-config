@@ -130,7 +130,7 @@
 
     config.common.default = "*";
   };
-  
+
   # First NixOS version installed.
   system.stateVersion = "26.11";
 
