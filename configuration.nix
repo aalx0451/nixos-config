@@ -104,6 +104,16 @@
   services.printing.enable = true;
   services.tlp.enable = true;
 
+  # XDG settings.
+  xdg.portal = {
+    enable = true;
+    extraPortals = [
+      pkgs.xdg-desktop-portal-gtk
+    ];
+
+    config.common.default = "*";
+  };
+  
   # First NixOS version installed.
   system.stateVersion = "26.11";
 
