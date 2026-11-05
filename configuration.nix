@@ -17,6 +17,10 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Show kernel errors and vconsole only.
+  boot.consoleLogLevel = 3;
+  boot.kernelParams = [ "quiet" ];
+
   # Host name.
   networking.hostName = "laurel";
 
