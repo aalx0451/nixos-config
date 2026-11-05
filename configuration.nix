@@ -21,6 +21,9 @@
   boot.consoleLogLevel = 3;
   boot.kernelParams = [ "quiet" ];
 
+  # Load i915 kernel module in initrd to prevent defaulting tty font
+  boot.initrd.kernelModules = [ "i915" ];
+
   # Host name.
   networking.hostName = "laurel";
 
