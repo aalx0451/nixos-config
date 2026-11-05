@@ -61,6 +61,7 @@
   # Fonts to enable.
   fonts.packages = with pkgs; [
     jetbrains-mono
+    noto-fonts
   ];
 
   # Services to enable.
