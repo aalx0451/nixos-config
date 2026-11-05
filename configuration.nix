@@ -55,4 +55,10 @@
 
   # First NixOS version installed.
   system.stateVersion = "26.11";
+
+  # Enable Nix experemental features.
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 }
