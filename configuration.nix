@@ -76,6 +76,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
   };
+  services.printing.enable = true;
 
   # First NixOS version installed.
   system.stateVersion = "26.11";
