@@ -71,6 +71,15 @@
     priority = 100;
   };
 
+  # Make low-priority swap file on a disk.
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024;
+      priority = 1;
+    }
+  ];
+
   # Enable hardware graphics driver.
   hardware.graphics.enable = true;
 
