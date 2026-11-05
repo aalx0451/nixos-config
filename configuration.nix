@@ -23,6 +23,9 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
+  # Time zone.
+  time.timeZone = "Europe/Moscow";
+
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
   system.stateVersion = "26.11";
