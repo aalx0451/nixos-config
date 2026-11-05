@@ -69,6 +69,7 @@
       };
     };
   };
+  services.openssh.enable = true;
 
   # First NixOS version installed.
   system.stateVersion = "26.11";
