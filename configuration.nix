@@ -57,6 +57,13 @@
     shell = pkgs.zsh;
   };
 
+  # Define root account.
+  users.users.root = {
+    description = "System Administrator";
+    enable = true;
+    shell = pkgs.zsh;
+  };
+
   # Disallow direct `useradd` using.
   users.mutableUsers = false;
 
