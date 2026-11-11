@@ -17,9 +17,33 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Enable some secure bootargs
+  boot.kernelParams = [
+    "intel_iommu=on"
+    "iommu=pt"
+    "init_on_alloc=1"
+    "init_on_free=1"
+    "page_poison=1"
+    "quiet"
+    "slab_nomerge=1"
+    "slab_debug=FZF"
+  ];
+
+  # Enable some secure sysctl settings.
+  boot.kernel.sysctl = {
+    "kernel.dmesg_restrict" = 1;
+    "kernel.kptr_restrict" = 2;
+    "kernel.yama.ptrace_scope" = 2;
+    "kernel.unprivileged_bpf_disabled" = 1;
+    "net.core.bpf_jit_harden" = 2;
+    "fs.protected_hardlinks" = 1;
+    "fs.protected_symlinks" = 1;
+    "fs.protected_fifos" = 2;
+    "fs.protected_regular" = 2;
+  };
+
   # Show kernel errors and vconsole only.
   boot.consoleLogLevel = 3;
-  boot.kernelParams = [ "quiet" ];
 
   # Load i915 kernel module in initrd to prevent defaulting tty font
   boot.initrd.kernelModules = [ "i915" ];
@@ -28,7 +52,11 @@
   networking.hostName = "laurel";
 
   # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    ethernet.macAddress = "random";
+    wifi.macAddress = "random";
+  };
 
   # Time zone.
   time.timeZone = "Europe/Moscow";
@@ -86,6 +114,9 @@
       priority = 1;
     }
   ];
+
+  # Enable MAC subsystem (AppArmor)
+  security.apparmor.enable = true;
 
   # Enable hardware graphics driver.
   hardware.graphics.enable = true;
