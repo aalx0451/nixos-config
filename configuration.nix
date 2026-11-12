@@ -121,6 +121,12 @@
   # Enable hardware graphics driver.
   hardware.graphics.enable = true;
 
+  # Enable bluetooth.
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+
   # Programs to enable.
   programs.dconf.enable = true;
   programs.sway.enable = true;
