@@ -29,6 +29,7 @@
           modules = [
             ./hardware-configuration.nix
             ./configuration.nix
+            ./cv2-fingerprint.nix
 
             lanzaboote.nixosModules.lanzaboote
 
