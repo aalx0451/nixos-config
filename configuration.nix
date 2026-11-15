@@ -118,6 +118,9 @@
   # Enable MAC subsystem (AppArmor)
   security.apparmor.enable = true;
 
+  # Enable polkit wrapper
+  security.polkit.enable = true;
+
   # Enable hardware graphics driver.
   hardware.graphics.enable = true;
 
