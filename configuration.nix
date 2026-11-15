@@ -135,6 +135,11 @@
   programs.sway.enable = true;
   programs.zsh.enable = true;
 
+  # Packages to enable.
+  environment.systemPackages = [
+    pkgs.keepassxc
+  ];
+
   # Fonts to enable.
   fonts.packages = with pkgs; [
     jetbrains-mono
