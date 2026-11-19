@@ -165,6 +165,7 @@
   };
   services.blueman.enable = true;
   services.fwupd.enable = true;
+  services.netbird.enable = true;
   services.openssh.enable = true;
   services.pipewire = {
     enable = true;
